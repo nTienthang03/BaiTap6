@@ -29,16 +29,43 @@ Chọn menu File > Open > File, chọn file sv_tnut.sql.
 Đổi tên file thành btap6 rồi chạy
 ![image](https://github.com/user-attachments/assets/8d1b23a1-4a54-4661-85a7-081d714a1929)
 
-# dữ liệu đầu vào 
+# 2 dữ liệu đầu vào 
 Tên của sv          : Nguyễn Tiến Thắng 
 Ngày-Thắng_năm sinh : 09-02-2003
 SỐ điện thoại       :  0388834522.
 
-# Nhập sql để tìm xem có những sv nào trùng hoàn toàn ngày/tháng/năm .
- gồm 4 sinh viên giống
+# 3 Nhập sql để tìm xem có những sv nào trùng hoàn toàn ngày/tháng/năm .
+ SELECT * FROM SV
+WHERE ns = '2003-02-09';
+
 ![image](https://github.com/user-attachments/assets/8b936918-283c-4cd7-b5e2-e9e8bf4d2d12)
 
+# 4. nhập sql để tìm xem có những sv nào trùng ngày và tháng sinh
+SELECT * FROM SV
+WHERE DAY(ns) = 9 AND MONTH(ns) = 2;
 
+![image](https://github.com/user-attachments/assets/ae38babe-be80-4d1d-9df9-2140ca4031fa)
 
+# 5. nhập sql để tìm xem có những sv nào trùng tháng và năm sinh
+SELECT * FROM SV
+WHERE MONTH(ns) = 2 AND YEAR(ns) = 2003;
+
+![image](https://github.com/user-attachments/assets/73a0bf51-6ec9-4ae4-97cd-68c5fed2978f)
+
+# 6. nhập sql để tìm xem có những sv nào trùng tên với em
+
+SELECT * FROM SV
+WHERE ten = N'Thắng';
+
+![image](https://github.com/user-attachments/assets/3b10fb05-a95f-4b64-9972-778761456493)
+
+# 7. nhập sql để tìm xem có những sv nào trùng họ và tên đệm với em.
+SELECT * FROM SV
+WHERE hodem = N'Nguyễn Tiến';
+
+8. nhập sql để tìm xem có những sv nào có sđt sai khác chỉ 1 số so với sđt của em.
+   
+10. BẢNG SV CÓ HƠN 9000 ROWS, HÃY LIỆT KÊ TẤT CẢ CÁC SV NGÀNH KMT, SẮP XẾP THEO TÊN VÀ HỌ ĐỆM, KIỂU TIẾNG  VIỆT, GIẢI THÍCH.
+11. HÃY NHẬP SQL ĐỂ LIỆT KÊ CÁC SV NỮ NGÀNH KMT CÓ TRONG BẢNG SV (TRÌNH BÀY QUÁ TRÌNH SUY NGHĨ VÀ GIẢI NHỮNG VỨNG MẮC)
 
 
